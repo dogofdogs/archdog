@@ -33,14 +33,11 @@ install_packages "${SYSTEM_UTILS[@]}"
 echo "Installing development tools..."
 install_packages "${DEV_TOOLS[@]}"
 
-echo "Installing system maintenance tools..."
-install_packages "${MAINTENANCE[@]}"
+# echo "Installing system maintenance tools..."
+# install_packages "${MAINTENANCE[@]}"
 
 echo "Installing desktop environment..."
 install_packages "${DESKTOP[@]}"
-
-echo "Installing desktop environment..."
-install_packages "${OFFICE[@]}"
 
 echo "Installing media packages..."
 install_packages "${MEDIA[@]}"
