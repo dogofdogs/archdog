@@ -1,0 +1,51 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+# colorscheme
+#
+# #2E3440
+# #3B4252
+# #434C5E
+# #4C566A
+# #D8DEE9
+# #E5E9F0
+# #ECEFF4
+# #8FBCBB
+# #88C0D0
+# #81A1C1
+# #5E81AC
+# #BF616A
+# #D08770
+# #EBCB8B
+# #A3BE8C
+# #B48EAD
+
+format = """
+$username\
+[  ](bg:#8fbcbb fg:#434c5e)\
+$directory\
+$git_branch\
+$git_status \
+"""
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bg:#81a1c1"
+style_root = "bg:#8fbcbb"
+format = '[ $user ]($style)'
+disabled = false
+
+[directory]
+style = "fg:#e3e5e5 bg:#434c5e"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#434c5e fg:#e3e5e5"
+format = '[  ](bg:#434c5e fg:#e3e5e5)[[ $symbol $branch ](fg:#e3e5e5 bg:#434c5e)]($style)'
+
+[git_status]
+style = "bg:#434c5e fg:#e3e5e5"
+format = '[[($all_status$ahead_behind )](fg:#e3e5e5 bg:#434c5e)]($style)'
