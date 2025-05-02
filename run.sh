@@ -1,3 +1,7 @@
+#!/bin/bash
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
+
 source utils.sh
 
 if [ ! -f "packages.conf" ]; then
@@ -49,4 +53,8 @@ install_packages_flatpak "${FLATPAKS[@]}"
 # Enable services
 echo "Configuring services..."
 sudo systemctl enable sddm.service
-sytemctl --user enable opentabletdriver.service --now
+sudo systemctl enable bluetooth.service
+sudo systemctl start sddm.service
+sudo systemctl start bluetooth.service
+systemctl --user enable opentabletdriver.service --now
+
