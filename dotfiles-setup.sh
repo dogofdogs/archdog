@@ -7,4 +7,4 @@ if ! is_stow_installed; then
   exit 1
 fi
 
-stow .config
+stow .config --adopt .config

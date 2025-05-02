@@ -45,8 +45,8 @@ install_packages "${MEDIA[@]}"
 echo "Installing fonts..."
 install_packages "${FONTS[@]}"
 
-install_packages_flatpak "${FLATPAK[@]}"
+install_packages_flatpak "${FLATPAKS[@]}"
 # Enable services
 echo "Configuring services..."
-sudo systemctl enable ly.service
+sudo systemctl enable sddm.service
 sytemctl --user enable opentabletdriver.service --now
