@@ -11,6 +11,8 @@ fi
 
 source packages.conf
 
+echo "enabling multilib for programs like steam"
+sed -i -e '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
 echo "Starting system setup..."
 
 echo "Updating system..."
