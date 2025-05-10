@@ -1,0 +1,14 @@
+
+
+
+
+
+profile internal {
+    output eDP-1 enable
+    output * disable
+}
+
+profile external {
+    output eDP-1 disable
+    output * enable 
+}
