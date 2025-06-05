@@ -54,9 +54,12 @@ install_packages "${FONTS[@]}"
 install_packages_flatpak "${FLATPAKS[@]}"
 # Enable services
 echo "Configuring services..."
+systemctl --user daemon-reload
 sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth.service
 sudo systemctl start sddm.service
 sudo systemctl start bluetooth.service
+systemctl --user enable kanata.service
+systemctl --user start kanata.service
 systemctl --user enable opentabletdriver.service --now
 
