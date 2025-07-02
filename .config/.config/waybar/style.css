@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+	background: #2e3440;
+	color: #eceff4;
 }
 
 #custom-right-arrow-dark,
@@ -14,7 +14,7 @@ window#waybar {
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #292b2e;
+	color: #2e3440;
 	background: #1a1a1a;
 }
 
@@ -49,19 +49,19 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #268bd2;
+	color: #81a1c1;
 }
 #memory {
-	color: #2aa198;
+	color: #81a1c1;
 }
 #cpu {
-	color: #6c71c4;
+	color: #81a1c1;
 }
 #battery {
-	color: #859900;
+	color: #81a1c1;
 }
 #disk {
-	color: #b58900;
+	color: #81a1c1;
 }
 
 #clock,
